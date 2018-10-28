@@ -3,7 +3,7 @@
     <parent>
         <artifactId>hadoop-mini-clusters</artifactId>
         <groupId>com.github.sakserv</groupId>
-        <version>0.1.16-SNAPSHOT</version>
+        <version>0.1.16-SNAPSHOT-BB</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -14,7 +14,26 @@
         <!-- Hadoop Client -->
         <dependency>
             <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-common</artifactId>
+            <version>${hadoop.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-client</artifactId>
+            <version>${hadoop.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-mapreduce-client-jobclient</artifactId>
+            <classifier>tests</classifier>
+            <version>${hadoop.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-mapreduce-client-hs</artifactId>
             <version>${hadoop.version}</version>
         </dependency>
 
@@ -38,6 +57,13 @@
             <groupId>com.github.sakserv</groupId>
             <artifactId>hadoop-mini-clusters-common</artifactId>
             <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-yarn-server-tests</artifactId>
+            <classifier>tests</classifier>
+            <version>${hadoop.version}</version>
         </dependency>
 
     </dependencies>
